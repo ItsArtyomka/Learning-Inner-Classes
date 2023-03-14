@@ -16,7 +16,7 @@ class TVset {
 
 // Nested class
 class Remote {
-    // Reference to the TVset class so the remote "know" what to control.
+    // Reference to the TVset class so the remote "knows" what to control.
     private TVset tvSet;
 
     public void setTVset(TVset tvSet) {
