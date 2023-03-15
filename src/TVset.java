@@ -1,4 +1,5 @@
 // Example code used to learn about Nested and Inner classes.
+@SuppressWarnings("FieldMayBeFinal")
 class TVset {
     //---Fields---
     private int channel = 1;
@@ -40,6 +41,7 @@ class TVset {
 class TestRun {
     public static void main(String[] args) {
         TVset tv = new TVset();
+//        TVset.Remote remote = TVset.getRemote(); // This only works if the getRemote method is static.
         TVset.Remote remote = tv.getRemote();
         System.out.println(tv);
         remote.turnOn();
@@ -49,5 +51,9 @@ class TestRun {
         remote.turnOff();
         System.out.println(tv);
 
+        // This way we create "nameless" TVset object tht is then used to create the Remote object
+        // in 1 line!!!
+        TVset.Remote remote1 = new TVset().new Remote();
+        remote1.turnOn();
     }
 }
