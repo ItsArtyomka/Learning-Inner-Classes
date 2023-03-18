@@ -51,7 +51,7 @@ class TestRun {
         remote.turnOff();
         System.out.println(tv);
 
-        // This way we create "nameless" TVset object tht is then used to create the Remote object
+        // This way we create "nameless" TVset object that is then used to create the Remote object
         // in 1 line!!!
         TVset.Remote remote1 = new TVset().new Remote();
         remote1.turnOn();
